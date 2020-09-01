@@ -1,4 +1,4 @@
-// Insira no objeto uma nova propriedade com o nome de chave "recorrente" e o valor "Sim" e, em seguida, imprima o objeto no console.
+// Faça um for/in que mostre todas as chaves do objeto.
 
 let info = {
     personagem: "Margarida",
@@ -7,4 +7,7 @@ let info = {
 };
 
 info.recorrente = 'Sim';
-console.log(info);
+
+for (keys in info){
+    console.log(keys);
+};
