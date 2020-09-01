@@ -1,4 +1,4 @@
-// Faça um for/in que mostre todas as chaves do objeto.
+// Faça um novo for/in, mas agora mostre todos os valores das chaves do objeto.
 
 let info = {
     personagem: "Margarida",
@@ -8,6 +8,6 @@ let info = {
 
 info.recorrente = 'Sim';
 
-for (keys in info) {
-    console.log(keys);
+for (let keys in info) {
+    console.log(info[keys]);
 };
