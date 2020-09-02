@@ -2,7 +2,7 @@
 
 function retornaIndiceMenorValor(arrayEscolhido) {
     let indiceAtual = 0;
-    let indiceenorrValor = 0;
+    let indiceMenorValor = 0;
     //verifica o menor valor do arrayEscolhido.
     for (i = 0; i < arrayEscolhido.length - 1; i += 1) {
         if (arrayEscolhido[i + 1] < arrayEscolhido[i]) {
