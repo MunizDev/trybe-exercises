@@ -59,7 +59,12 @@
             let descricao = document.querySelectorAll(".center-content>p");
             descricao[0].innerText = texto;
         }
-        
+
+        function mudaCorQuadro(novaCor){
+            let corDaPagina = document.getElementsByClassName("main-content");
+            corDaPagina[0].style.backgroundColor = novaCor;
+        }
+
         
     </script>
 </body>
