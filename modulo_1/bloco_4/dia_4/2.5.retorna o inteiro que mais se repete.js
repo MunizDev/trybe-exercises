@@ -10,7 +10,7 @@
 function numeroRepeticoes(array, indice) {
     //arrayteste, 1
     let numeroRepeticoes = 0;
-    for (let i = 0; i < array.length - 1; i += 1) {
+    for (let i = 0; i < array.length; i += 1) {
         if (array[indice] === array[i]) {
             numeroRepeticoes += 1;
         }
@@ -33,3 +33,15 @@ function comparaElementosArray(arrayEscolhido) {
 
 let arrayTeste = [2, 3, 2, 5, 8, 2, 3];
 console.log(comparaElementosArray(arrayTeste));
+
+
+
+
+
+
+//arrumar função comparaElementosArray
+/*
+podemos montar um array paralelo com a contagem de repetições de cada inteiro...
+deixando os indices paralelos dos dois arrays (contagem de repeticao, arrayEscolhido)
+podemos achar o maior número no array contagem de repetição e usar esse infice para retornar o valor do arrayEscolhido que mais se repete
+*/
