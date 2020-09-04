@@ -55,19 +55,21 @@
         6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
 
-        function mudaTexto(texto){
+        function mudaTexto(texto) {
             let descricao = document.querySelectorAll(".center-content>p");
             descricao[0].innerText = texto;
         }
 
-        function mudaCorQuadroExterno(novaCorExterna){
+        function mudaCorQuadroExterno(novaCorExterna) {
             let corDaPagina = document.getElementsByClassName("main-content");
             corDaPagina[0].style.backgroundColor = novaCorExterna;
         }
 
-        function mudaCorQuadroInterno(){
-
+        function mudaCorQuadroInterno(novaCorInterna) {
+            let corQuadroInterno = document.getElementsByClassName("center-content");
+            corQuadroInterno[0].style.backgroundColor = novaCorInterna;
         }
+
     </script>
 </body>
 
