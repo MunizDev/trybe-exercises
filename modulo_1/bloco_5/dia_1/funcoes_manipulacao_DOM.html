@@ -71,11 +71,18 @@
             corQuadroInterno[0].style.backgroundColor = "white";
         }
 
-        function corrigeTitle(){
+        function corrigeTitle() {
             let tituloPagina = document.getElementsByTagName("h1");
             tituloPagina[0].innerText = "Exercício 5.1 - JavaScript";
         }
 
+        function deixaMaiusculoP() {
+            let paragrafos = document.getElementsByTagName("p");
+            for (i = 0; i < paragrafos.length; i += 1) {
+                paragrafos[i].innerText = paragrafos[i].innerText.toUpperCase();
+            }
+        }
+        
     </script>
 </body>
 
