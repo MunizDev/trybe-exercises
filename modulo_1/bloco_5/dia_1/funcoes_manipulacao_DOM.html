@@ -82,7 +82,24 @@
                 paragrafos[i].innerText = paragrafos[i].innerText.toUpperCase();
             }
         }
-        
+
+        function exibeParagrafosConsole() {
+            let paragrafos = document.getElementsByTagName("p");
+            for (i = 0; i < paragrafos.length; i += 1) {
+                console.log(paragrafos[i].innerText)
+            }
+        }
+
+        //teste das funções
+        mudaTexto();
+        mudaCorQuadroExterno();
+        mudaCorQuadroInterno();
+        corrigeTitle();
+        deixaMaiusculoP();
+        exibeParagrafosConsole();
+
+
+
     </script>
 </body>
 
