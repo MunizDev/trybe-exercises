@@ -108,7 +108,7 @@
 
         let numerosPorExtenso = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
 
-        for(let i = 0; i < numerosPorExtenso.length; i += 1){
+        for (let i = 0; i < numerosPorExtenso.length; i += 1) {
             let item = document.createElement('li');
             item.innerText = numerosPorExtenso[i];
 
@@ -116,7 +116,7 @@
         }
 
         //9. Adicione 3 tags h3, todas sendo filhas do div criado no passo 2(id="tagdiv").
-        for(let i = 0; i < 3; i += 1){
+        for (let i = 0; i < 3; i += 1) {
             let tagsTitulos = document.createElement('h3');
             tagsTitulos.innerText = "Essa é uma tag H3 :)"
             document.getElementById('tagdiv').appendChild(tagsTitulos);
