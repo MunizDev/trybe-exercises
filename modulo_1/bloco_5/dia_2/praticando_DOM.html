@@ -74,7 +74,13 @@
         //3. Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
         let subDiv = document.createElement('div');
         subDiv.className = "center-content";
+        subDiv.id = "subdiv";
         document.getElementById('tagdiv').appendChild(subDiv);
+
+        //4. Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+        let paragrafo = document.createElement('p');
+        paragrafo.innerText = "Eu sou incrível!";
+        document.getElementById('subdiv').appendChild(paragrafo);
     </script>
 </body>
 
