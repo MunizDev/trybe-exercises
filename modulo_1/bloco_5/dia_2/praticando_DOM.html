@@ -136,8 +136,10 @@
         let parentLeftContent = document.querySelector('.main-content');
         let filhoRemover = document.querySelectorAll('.left-content')[0];
         parentLeftContent.removeChild(filhoRemover);
-        
-        
+
+        //4. Centralize o div criado no passo 6 (aquele que possui a classe right-content). Dica: para centralizar, basta configurar o margin-right: auto do div;
+        let divCentralizar = document.querySelector('.right-content');
+        divCentralizar.style.marginRight = "auto";
 
     </script>
 </body>
