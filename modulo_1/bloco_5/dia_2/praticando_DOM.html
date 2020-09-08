@@ -81,6 +81,12 @@
         let paragrafo = document.createElement('p');
         paragrafo.innerText = "Eu sou incrível!";
         document.getElementById('subdiv').appendChild(paragrafo);
+
+        //5. Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+        let subDivLeft = document.createElement('div');
+        subDivLeft.className = "left-content";
+        subDivLeft.id = "subdivLeft"
+        document.getElementById('tagdiv').appendChild(subDivLeft);
     </script>
 </body>
 
