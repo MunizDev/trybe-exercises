@@ -132,6 +132,13 @@
             document.querySelectorAll('.main-content h3')[i].className = "description";
         }
 
+        //3. Remova o div criado no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
+        let parentLeftContent = document.querySelector('.main-content');
+        let filhoRemover = document.querySelectorAll('.left-content')[0];
+        parentLeftContent.removeChild(filhoRemover);
+        
+        
+
     </script>
 </body>
 
