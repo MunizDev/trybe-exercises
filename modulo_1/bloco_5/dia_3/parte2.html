@@ -34,9 +34,17 @@
             <strong>discount</strong> o resultado da multiplicação.
         </p>
         <script language="javascript" type="text/javascript">
-        //JavaScript para a tarefa 2
-        //JavaScript para a tarefa 2
-        //JavaScript para a tarefa 2
+        let productPrice = 59.99;
+        let discount = 0.3;
+        let tagP = document.querySelectorAll('p')[1];
+        let buttonDiscont = document.createElement('button');
+        buttonDiscont.innerText = "calcular desconto";
+        buttonDiscont.className = "button-discont";
+        tagP.appendChild(buttonDiscont);
+        document.querySelector('.button-discont').addEventListener("click", function(){
+            let resultado = productPrice * discount;
+            alert("Desconto de R$" + resultado);
+        })      
         </script>
         <hr />
         <h2>Bônus</h2>
