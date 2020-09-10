@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Cat Walk</title>
+</head>
+
+<body>
+
+    <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+
+    <script>
+        let imgCat = document.querySelector('img');
+        imgCat.style.left = "0px";
+        let metadeCorpoGato = 296 / 2;
+
+        function catWalk() {
+            imgCat.style.left = parseInt(imgCat.style.left) + 10 + "px";
+            console.log("catWalk");
+
+
+            //dancando
+            if (parseInt(imgCat.style.left) < window.innerWidth / 2 + 5 - metadeCorpoGato && parseInt(imgCat.style.left) > window.innerWidth / 2 - 5 - metadeCorpoGato) {
+                console.log("tentando colocar pra dancar")
+                clearInterval(intervalo);
+                imgCat.src = "https://i.pinimg.com/originals/89/3c/09/893c0970bf3378f80c1d9edd33adf1b0.gif"
+                setTimeout(stopDancingFoward, 10000);
+            }
+
+            if (parseInt(imgCat.style.left) > window.innerWidth - 296) {
+                clearInterval(intervalo);
+                intervalo = setInterval(catWalkBack, 50);
+            }
+        }
+
+        function catWalkBack() {
+            imgCat.style.left = parseInt(imgCat.style.left) - 10 + "px";
+            console.log("catWalkBack");
+
+            //dancando
+            if (parseInt(imgCat.style.left) < window.innerWidth / 2 + 5 - metadeCorpoGato && parseInt(imgCat.style.left) > window.innerWidth / 2 - 5 - metadeCorpoGato) {
+                console.log("tentando colocar pra dancar")
+                clearInterval(intervalo);
+                imgCat.src = "https://i.pinimg.com/originals/89/3c/09/893c0970bf3378f80c1d9edd33adf1b0.gif"
+                setTimeout(stopDancingBack, 10000);
+            }
+
+            if (parseInt(imgCat.style.left) < 0) {
+                clearInterval(intervalo);
+                intervalo = setInterval(catWalk, 50);
+            }
+        }
+
+        function stopDancingBack() {
+            imgCat.src = "http://www.anniemation.com/clip_art/images/cat-walk.gif"
+            intervalo = setInterval(catWalkBack, 50);
+        }
+
+        function stopDancingFoward() {
+            imgCat.src = "http://www.anniemation.com/clip_art/images/cat-walk.gif"
+            intervalo = setInterval(catWalk, 50);
+        }
+
+        let intervalo = setInterval(catWalk, 50);
+
+
+    </script>
+
+</body>
+
+</html>
