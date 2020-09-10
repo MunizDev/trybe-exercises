@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Reader</title>
+    <style>
+        .text p {
+            line-height: 20px;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+
+        body {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="options">
+        <div>
+            <label for="background-color">Background Color :</label>
+            <input name="background-color" id="background-color" />
+            <button name="background-color">change!</button>
+
+            <br><br>
+
+            <label for="text-color">Text Color:</label>
+            <input name="text-color" id="text-color" />
+            <button name="text-color">change!</button>
+
+            <br><br>
+
+            <label for="text-size">Text Size:</label>
+            <input name="text-size" id="text-size" />
+            <button name="text-size">change!</button>
+
+            <br><br>
+
+            <label for="line-height">Line Height:</label>
+            <input name="line-height" id="line-height" />
+            <button name="line-height">change!</button>
+
+            <br><br>
+
+            <label for="font-family">Font Family:</label>
+            <input name="font-family" id="font-family" />
+            <button name="font-family">change!</button>
+        </div>
+    </section>
+    <section class="text">
+        <div>
+            <h1>Lorem ipsum, dolor!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem impedit maiores nobis quo sequi tempora
+                eveniet iste consequatur sint natus, aspernatur officiis, enim doloribus et. Veritatis iste omnis
+                tempora
+                iusto!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis incidunt asperiores rem
+                laudantium magnam consequatur eum nemo. Incidunt laboriosam cum ducimus sed ipsum deleniti perferendis
+                ut.
+                Eveniet, suscipit dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, vero eum. Sunt,
+                autem perferendis ex laudantium voluptatibus eius dolorem incidunt asperiores similique ad recusandae,
+                nulla, delectus aspernatur! Minima, et eaque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio, necessitatibus officia deleniti eligendi esse a at quasi impedit, quibusdam nihil aut
+                repudiandae pariatur voluptatem ex sed quo quisquam totam sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis incidunt asperiores rem
+                laudantium magnam consequatur eum nemo. Incidunt laboriosam cum ducimus sed ipsum deleniti perferendis
+                ut.
+                Eveniet, suscipit dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, vero eum. Sunt,
+                autem perferendis ex laudantium voluptatibus eius dolorem incidunt asperiores similique ad recusandae,
+                nulla, delectus aspernatur! Minima, et eaque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio, necessitatibus officia deleniti eligendi esse a at quasi impedit, quibusdam nihil aut
+                repudiandae pariatur voluptatem ex sed quo quisquam totam sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis incidunt asperiores rem
+                laudantium magnam consequatur eum nemo. Incidunt laboriosam cum ducimus sed ipsum deleniti perferendis
+                ut.
+                Eveniet, suscipit dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, vero eum. Sunt,
+                autem perferendis ex laudantium voluptatibus eius dolorem incidunt asperiores similique ad recusandae,
+                nulla, delectus aspernatur! Minima, et eaque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio, necessitatibus officia deleniti eligendi esse a at quasi impedit, quibusdam nihil aut
+                repudiandae pariatur voluptatem ex sed quo quisquam totam sequi!</p>
+        </div>
+    </section>
+
+
+    <script>
+        //localizando elementos
+        let inputBackgroundColor = document.getElementById('background-color');
+
+        let inputTextColor = document.getElementById('text-color');
+
+        let inputTextSize = document.getElementById('text-size');
+
+        let inputLineHeight = document.getElementById('line-height');
+
+        let inputFontFamily = document.getElementById('font-family');
+
+        let numbersParagraphs = document.querySelectorAll('.text p').length
+
+        //execucoes
+        document.querySelectorAll('button')[0].addEventListener('click', function () {
+            document.body.style.backgroundColor = inputBackgroundColor.value;
+        })
+
+        document.querySelectorAll('button')[1].addEventListener('click', function () {
+            document.querySelector('.text').style.color = inputTextColor.value;
+        })
+
+        document.querySelectorAll('button')[2].addEventListener('click', function () {
+            document.querySelector('.text').style.fontSize = inputTextSize.value;
+        })
+
+        document.querySelectorAll('button')[3].addEventListener('click', function () {
+            for (index = 0; index < numbersParagraphs; index += 1) {
+                document.querySelectorAll('.text p')[index].style.lineHeight = inputLineHeight.value;
+            }
+        })
+
+        document.querySelectorAll('button')[4].addEventListener('click', function () {
+            for (index = 0; index < numbersParagraphs; index += 1) {
+                document.querySelectorAll('.text p')[index].style.fontFamily = inputFontFamily.value;
+            }
+
+            document.querySelector('h1').style.fontFamily = inputFontFamily.value;
+
+        })
+
+    </script>
+</body>
+
+</html>
