@@ -34,17 +34,17 @@
             <strong>discount</strong> o resultado da multiplicação.
         </p>
         <script language="javascript" type="text/javascript">
-        let productPrice = 59.99;
-        let discount = 0.3;
-        let tagP = document.querySelectorAll('p')[1];
-        let buttonDiscont = document.createElement('button');
-        buttonDiscont.innerText = "calcular desconto";
-        buttonDiscont.className = "button-discont";
-        tagP.appendChild(buttonDiscont);
-        document.querySelector('.button-discont').addEventListener("click", function(){
-            let resultado = productPrice * discount;
-            alert("Desconto de R$" + resultado);
-        })      
+            let productPrice = 59.99;
+            let discount = 0.3;
+            let tagP = document.querySelectorAll('p')[1];
+            let buttonDiscont = document.createElement('button');
+            buttonDiscont.innerText = "calcular desconto";
+            buttonDiscont.className = "button-discont";
+            tagP.appendChild(buttonDiscont);
+            document.querySelector('.button-discont').addEventListener("click", function () {
+                let resultado = productPrice * discount;
+                alert("Desconto de R$" + resultado);
+            })      
         </script>
         <hr />
         <h2>Bônus</h2>
@@ -61,7 +61,8 @@
             Além disso, sempre que um dos eventos for realizado deve-se logar no
             console qual dos eventos acabou de ocorrer.
         </p>
-        <!-- Adicione a tag <img /> aqui -->
+        <img src="https://www.petlove.com.br/dicas/wp-content/uploads/2020/03/quarentena-dicas-petlove-1280x720.jpg"
+            width="200px" />
     </div>
 
 
@@ -74,7 +75,21 @@
         button.className = "button";
         task1.appendChild(button);
 
-        document.querySelector('.button').addEventListener("click", function(){ alert ("Você clicou no botão")});
+        document.querySelector('.button').addEventListener("click", function () { alert("Você clicou no botão") });
+
+        //Bônus
+        let imagem = document.querySelector('img');
+
+        function onMouseOver() {
+            imagem.src = "https://cdn.pixabay.com/photo/2020/03/28/07/59/cat-4975982__340.jpg"
+        }
+
+        function onMouseLeave() {
+            imagem.src = "https://www.petlove.com.br/dicas/wp-content/uploads/2020/03/quarentena-dicas-petlove-1280x720.jpg"
+        }
+
+        imagem.addEventListener("mouseover", onMouseOver);
+        imagem.addEventListener("mouseleave", onMouseLeave);
     </script>
 </body>
 
