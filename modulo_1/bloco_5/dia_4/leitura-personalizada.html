@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Reader</title>
+    <style>
+        .text p {
+            line-height: 20px;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="options">
+        <div>
+            <label for="background-color">Background Color :</label>
+            <input name="background-color" id="background-color" />
+            <button name="background-color">change!</button>
+
+            <br><br>
+
+            <label for="text-color">Text Color:</label>
+            <input name="text-color" id="text-color" />
+            <button name="text-color">change!</button>
+
+            <br><br>
+
+            <label for="text-size">Text Size:</label>
+            <input name="text-size" id="text-size" />
+            <button name="text-size">change!</button>
+
+            <br><br>
+
+            <label for="line-height">Line Height:</label>
+            <input name="line-height" id="line-height" />
+            <button name="line-height">change!</button>
+
+            <br><br>
+
+            <label for="font-family">Font Family:</label>
+            <input name="font-family" id="font-family" />
+            <button name="font-family">change!</button>
+        </div>
+    </section>
+    <section class="text">
+        <div>
+            <h1>Lorem ipsum, dolor!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem impedit maiores nobis quo sequi tempora
+                eveniet iste consequatur sint natus, aspernatur officiis, enim doloribus et. Veritatis iste omnis
+                tempora
+                iusto!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis incidunt asperiores rem
+                laudantium magnam consequatur eum nemo. Incidunt laboriosam cum ducimus sed ipsum deleniti perferendis
+                ut.
+                Eveniet, suscipit dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, vero eum. Sunt,
+                autem perferendis ex laudantium voluptatibus eius dolorem incidunt asperiores similique ad recusandae,
+                nulla, delectus aspernatur! Minima, et eaque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio, necessitatibus officia deleniti eligendi esse a at quasi impedit, quibusdam nihil aut
+                repudiandae pariatur voluptatem ex sed quo quisquam totam sequi!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis incidunt asperiores rem
+                laudantium magnam consequatur eum nemo. Incidunt laboriosam cum ducimus sed ipsum deleniti perferendis
+                ut.
+                Eveniet, suscipit dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, vero eum. Sunt,
+                autem perferendis ex laudantium voluptatibus eius dolorem incidunt asperiores similique ad recusandae,
+                nulla, delectus aspernatur! Minima, et eaque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio, necessitatibus officia deleniti eligendi esse a at quasi impedit, quibusdam nihil aut
+                repudiandae pariatur voluptatem ex sed quo quisquam totam sequi!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis incidunt asperiores rem
+                laudantium magnam consequatur eum nemo. Incidunt laboriosam cum ducimus sed ipsum deleniti perferendis
+                ut.
+                Eveniet, suscipit dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, vero eum. Sunt,
+                autem perferendis ex laudantium voluptatibus eius dolorem incidunt asperiores similique ad recusandae,
+                nulla, delectus aspernatur! Minima, et eaque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio, necessitatibus officia deleniti eligendi esse a at quasi impedit, quibusdam nihil aut
+                repudiandae pariatur voluptatem ex sed quo quisquam totam sequi!</p>
+        </div>
+    </section>
+
+
+    <script>
+        //valores das preferencias que o navegador recupera no local storage
+        document.body.style.backgroundColor = localStorage.getItem("background-color");
+
+        document.querySelector('.text').style.color = localStorage.getItem("text-color");
+
+        document.querySelector('.text').style.fontSize = localStorage.getItem("text-size");
+
+        document.querySelector('.text p').style.fontFamily = localStorage.getItem("font-family");
+
+        document.querySelector('.text p').style.lineHeight = localStorage.getItem("line-height");
+
+
+        //localizando elementos no html e declarando variaveis
+        let inputBackgroundColor = document.getElementById('background-color');
+
+        let inputTextColor = document.getElementById('text-color');
+
+        let inputTextSize = document.getElementById('text-size');
+
+        let inputLineHeight = document.getElementById('line-height');
+
+        let inputFontFamily = document.getElementById('font-family');
+
+        let numbersParagraphs = document.querySelectorAll('.text p').length
+
+        //eventos que acontecem com a interacao do usuario quando preenche as preferencias e clica no botao.
+        document.querySelectorAll('button')[0].addEventListener('click', function () {
+            document.body.style.backgroundColor = inputBackgroundColor.value;
+
+            //armazena preferência 1
+            localStorage.setItem("background-color", document.body.style.backgroundColor)
+        })
+
+        document.querySelectorAll('button')[1].addEventListener('click', function () {
+            document.querySelector('.text').style.color = inputTextColor.value;
+
+            //armazena preferência 2
+            localStorage.setItem("text-color", document.querySelector('.text').style.color)
+        })
+
+        document.querySelectorAll('button')[2].addEventListener('click', function () {
+            document.querySelector('.text').style.fontSize = inputTextSize.value;
+
+            //armazena preferência 3
+            localStorage.setItem("text-size", document.querySelector('.text').style.fontSize)
+        })
+
+        document.querySelectorAll('button')[3].addEventListener('click', function () {
+            document.querySelector('.text p').style.lineHeight = inputLineHeight.value;
+
+            //armazena preferência 4
+            localStorage.setItem("line-height", document.querySelector('.text p').style.lineHeight)
+        })
+
+        document.querySelectorAll('button')[4].addEventListener('click', function () {
+            document.querySelector('.text p').style.fontFamily = inputFontFamily.value;
+
+            //armazena preferência 5
+            localStorage.setItem("font-family", document.querySelector('.text p').style.fontFamily)
+
+        })
+
+
+    </script>
+</body>
+
+</html>
