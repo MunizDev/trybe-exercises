@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Dados Pessoais: </legend>
+            <label for="name">Nome:</label>
+            <input required type="text" id="name" name="name" maxlength="40">
+
+            <label for="email">Email:</label>
+            <input required type="text" id="email" name="email" maxlength="50">
+
+            <label for="cpf">CPF:</label>
+            <input required type="text" id="cpf" name="cpf" maxlength="11">
+
+            <label for="address">Endereço:</label>
+            <input required type="text" id="address" name="address" maxlength="200">
+
+            <label for="city">Cidade:</label>
+            <input required type="text" id="city" name="city" maxlength="28">
+
+            <label for="states">Escolha uma cidade:</label>
+            <select required id="states">
+            </select>
+            <br>
+            <label for="moradia">Moradia:</label>
+            <br>
+            <input required type="radio" id="casa" name="moradia" value="casa">
+            <label for="casa">Casa</label>
+
+            <input required type="radio" id="apartamento" name="moradia" value="apartamento">
+            <label for="apartamento">Apartamento</label>
+        </fieldset>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
