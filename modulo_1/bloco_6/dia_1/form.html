@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="">
+    <form action="" method="" class="">
         <fieldset>
             <legend>Dados Pessoais: </legend>
             <label for="name">Nome:</label>
@@ -39,6 +39,21 @@
             <input required type="radio" id="apartamento" name="moradia" value="apartamento">
             <label for="apartamento">Apartamento</label>
         </fieldset>
+        <fieldset>
+            <label for="curriculo">Resumo Currículo:</label>
+            <textarea required name="curriculo" id="curriculo" cols="50" rows="5"></textarea>
+
+            <label for="cargo">Cargo:</label>
+            <input required type="text" id="cargo" name="cargo" maxlength="40">
+
+            <label for="desc-cargo">Descrição do Cargo:</label>
+            <input required type="text" id="desc-cargo" name="desc-cargo" maxlength="500">
+
+            <label for="data-inicio">Data Início:</label>
+            <input required type="text" id="data-inicio" name="data-inicio" maxlength="10">
+        </fieldset>
+
+        <button type="submit" id="submit" value="Submit">Submit</button>
     </form>
     <script src="script.js"></script>
 </body>
