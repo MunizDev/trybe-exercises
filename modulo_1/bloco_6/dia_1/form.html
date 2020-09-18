@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="" method="" class="">
+    <form action="" method="">
         <fieldset>
             <legend>Dados Pessoais: </legend>
             <label for="name">Nome:</label>
@@ -27,17 +27,18 @@
             <label for="city">Cidade:</label>
             <input required type="text" id="city" name="city" maxlength="28">
 
-            <label for="states">Escolha uma cidade:</label>
+            <label for="states">Escolha um estado:</label>
             <select required id="states">
             </select>
             <br>
             <label for="moradia">Moradia:</label>
             <br>
-            <input required type="radio" id="casa" name="moradia" value="casa">
-            <label for="casa">Casa</label>
+            <label for="casa">
+                <input required type="radio" id="casa" name="moradia" value="casa"> Casa</label>
 
-            <input required type="radio" id="apartamento" name="moradia" value="apartamento">
-            <label for="apartamento">Apartamento</label>
+            <label for="apartamento">
+                <input required type="radio" id="apartamento" name="moradia" value="apartamento">
+                Apartamento</label>
         </fieldset>
         <fieldset>
             <label for="curriculo">Resumo Currículo:</label>
@@ -55,6 +56,10 @@
 
         <button type="submit" id="submit" value="Submit">Submit</button>
     </form>
+    <div id="consolidacao">
+        Resumo de Tudo:
+        <br><br>
+    </div>
     <script src="script.js"></script>
 </body>
 

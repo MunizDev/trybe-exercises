@@ -5,6 +5,7 @@ let optionsStates = ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará',
 let comboBox = document.getElementById('states');
 let dataInput = document.getElementById('data-inicio');
 let buttonSubimit = document.getElementById('submit');
+let divConsolidacao = document.getElementById('consolidacao');
 
 for (let index = 0; index < optionsStates.length; index += 1) {
     let optionTag = document.createElement('option');
@@ -30,3 +31,32 @@ dataInput.addEventListener('keyup', function () {
         }
     }
 });
+
+
+function stopAction(evt) {
+    evt.preventDefault();
+}
+
+buttonSubimit.addEventListener('click', stopAction, false);
+
+buttonSubimit.addEventListener('click', function () {
+    divConsolidacao.innerHTML = "";
+    let allLabels = document.querySelectorAll('label');
+    let allInputs = document.querySelectorAll('input');
+    for (let index = 0; index < 5; index += 1) {
+        divConsolidacao.innerText += allLabels[index].innerText + allInputs[index].value + '\n';
+    }
+    //Escolha um estado
+    divConsolidacao.innerText += allLabels[5].innerText + comboBox.options[comboBox.selectedIndex].text + '\n';
+
+    //Moradia
+    let selected = "";
+    if (document.getElementById('casa').checked) {
+        selected = "Casa"
+    }
+    if (document.getElementById('apartamento').checked) {
+        selected = "Apartamento"
+    }
+    divConsolidacao.innerText += allLabels[6].innerText + selected + '\n';
+});
+
