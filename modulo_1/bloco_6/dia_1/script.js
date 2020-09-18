@@ -2,10 +2,12 @@ let valuesStates = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 
 
 let optionsStates = ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'Distrito Federal', 'Espírito Santo', 'Goiás', 'Maranhão', 'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais', 'Pará', 'Paraíba', 'Paraná', 'Pernambuco', 'Piauí', 'Rio de Janeiro', 'Rio Grande do Norte', 'Rio Grande do Sul', 'Rondônia', 'Roraima', 'Santa Catarina', 'São Paulo', 'Sergipe', 'Tocantins', 'Estrangeiro'];
 
+let formCurriculo = document.getElementById('formCurriculo');
 let comboBox = document.getElementById('states');
 let dataInput = document.getElementById('data-inicio');
 let buttonSubimit = document.getElementById('submit');
 let divConsolidacao = document.getElementById('consolidacao');
+let buttonClear = document.getElementById('clear');
 
 for (let index = 0; index < optionsStates.length; index += 1) {
     let optionTag = document.createElement('option');
@@ -43,6 +45,8 @@ buttonSubimit.addEventListener('click', function () {
     divConsolidacao.innerHTML = "";
     let allLabels = document.querySelectorAll('label');
     let allInputs = document.querySelectorAll('input');
+
+    //nome até cidade
     for (let index = 0; index < 5; index += 1) {
         divConsolidacao.innerText += allLabels[index].innerText + allInputs[index].value + '\n';
     }
@@ -58,5 +62,17 @@ buttonSubimit.addEventListener('click', function () {
         selected = "Apartamento"
     }
     divConsolidacao.innerText += allLabels[6].innerText + selected + '\n';
+
+    // Textarea
+    divConsolidacao.innerText += allLabels[9].innerText + document.querySelector('textarea').value + '\n';
+
+    // resumo curriculo até data inicio
+    for (let index = 10; index < 13; index += 1) {
+        divConsolidacao.innerText += allLabels[index].innerText + allInputs[index - 3].value + '\n';
+    }
 });
 
+buttonClear.addEventListener('click', function () {
+    divConsolidacao.innerHTML = "";
+    formCurriculo.reset();
+});
