@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form id="formCurriculo" action="" method="">
+        <fieldset>
+            <legend>Dados Pessoais: </legend>
+            <label for="name">Nome:</label>
+            <input required type="text" id="name" name="name" maxlength="40">
+
+            <label for="email">Email:</label>
+            <input required type="text" id="email" name="email" maxlength="50">
+
+            <label for="cpf">CPF:</label>
+            <input required type="text" id="cpf" name="cpf" maxlength="11">
+
+            <label for="address">Endereço:</label>
+            <input required type="text" id="address" name="address" maxlength="200">
+
+            <label for="city">Cidade:</label>
+            <input required type="text" id="city" name="city" maxlength="28">
+
+            <label for="states">Escolha um estado:</label>
+            <select required id="states">
+            </select>
+            <br>
+            <label for="moradia">Moradia:</label>
+            <br>
+            <label for="casa">
+                <input required type="radio" id="casa" name="moradia" value="casa"> Casa</label>
+
+            <label for="apartamento">
+                <input required type="radio" id="apartamento" name="moradia" value="apartamento">
+                Apartamento</label>
+        </fieldset>
+        <fieldset>
+            <label for="curriculo">Resumo Currículo:</label>
+            <textarea required name="curriculo" id="curriculo" cols="50" rows="5"></textarea>
+
+            <label for="cargo">Cargo:</label>
+            <input required type="text" id="cargo" name="cargo" maxlength="40">
+
+            <label for="desc-cargo">Descrição do Cargo:</label>
+            <input required type="text" id="desc-cargo" name="desc-cargo" maxlength="500">
+
+            <label for="data-inicio">Data Início:</label>
+            <input required type="text" id="data-inicio" name="data-inicio" maxlength="10">
+        </fieldset>
+
+        <button type="submit" id="submit" value="Submit">Submit</button>
+    </form>
+    <button id="clear">Limpar</button>
+    <div id="consolidacao">
+        Resumo de Tudo:
+        <br><br>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
