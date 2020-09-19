@@ -18,12 +18,9 @@ for (let index = 0; index < optionsStates.length; index += 1) {
 
 dataInput.DatePickerX.init();
 
-
 function stopAction(evt) {
     evt.preventDefault();
 }
-
-buttonSubimit.addEventListener('click', stopAction, false);
 
 buttonSubimit.addEventListener('click', function () {
     divConsolidacao.innerHTML = "";
@@ -60,3 +57,5 @@ buttonClear.addEventListener('click', function () {
     divConsolidacao.innerHTML = "";
     formCurriculo.reset();
 });
+
+validation.init("#formCurriculo");
