@@ -16,23 +16,7 @@ for (let index = 0; index < optionsStates.length; index += 1) {
     comboBox.appendChild(optionTag);
 }
 
-dataInput.addEventListener('keyup', function () {
-    if (dataInput.value.length === 10) {
-        let arrayData = dataInput.value.split('/');
-        let dia = arrayData[0];
-        let mes = arrayData[1];
-        let ano = arrayData[2];
-        if (dia <= 0 || dia > 31) {
-            alert('o dia está incorreto')
-        }
-        if (parseInt(mes) <= 0 || parseInt(mes) > 12) {
-            alert('o mês está incorreto')
-        }
-        if (parseInt(ano) <= 0) {
-            alert('o ano está incorreto')
-        }
-    }
-});
+dataInput.DatePickerX.init();
 
 
 function stopAction(evt) {
@@ -51,7 +35,7 @@ buttonSubimit.addEventListener('click', function () {
         divConsolidacao.innerText += allLabels[index].innerText + allInputs[index].value + '\n';
     }
     //Escolha um estado
-    divConsolidacao.innerText += allLabels[5].innerText + comboBox.options[comboBox.selectedIndex].text + '\n';
+    divConsolidacao.innerText += "Escolha um estado:" + comboBox.options[comboBox.selectedIndex].text + '\n';
 
     //Moradia
     let selected = "";
@@ -61,14 +45,14 @@ buttonSubimit.addEventListener('click', function () {
     if (document.getElementById('apartamento').checked) {
         selected = "Apartamento"
     }
-    divConsolidacao.innerText += allLabels[6].innerText + selected + '\n';
+    divConsolidacao.innerText += allLabels[5].innerText + selected + '\n';
 
     // Textarea
-    divConsolidacao.innerText += allLabels[9].innerText + document.querySelector('textarea').value + '\n';
+    divConsolidacao.innerText += allLabels[8].innerText + document.querySelector('textarea').value + '\n';
 
-    // resumo curriculo até data inicio
-    for (let index = 10; index < 13; index += 1) {
-        divConsolidacao.innerText += allLabels[index].innerText + allInputs[index - 3].value + '\n';
+    // cargo até data inicio
+    for (let index = 9; index < 12; index += 1) {
+        divConsolidacao.innerText += allLabels[index].innerText + allInputs[index - 2].value + '\n';
     }
 });
 
