@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bulma.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="notification">
+            <form id="formCurriculo" action="" method="">
+
+                <h1 class="title">Dados Pessoais:</h1>
+
+                <div class="field">
+                    <label for="name">Nome:</label>
+                    <div class="control">
+                        <input required type="text" id="name" name="name" maxlength="40">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email:</label>
+                    <div class="control">
+                        <input required type="text" id="email" name="email" maxlength="50">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="cpf">CPF:</label>
+                    <div class="control">
+                        <input required type="text" id="cpf" name="cpf" maxlength="11">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="address">Endereço:</label>
+                    <div class="control">
+                        <input required type="text" id="address" name="address" maxlength="200">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="city">Cidade:</label>
+                    <div class="control">
+                        <input required type="text" id="city" name="city" maxlength="28">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p class="control has-icons-left">
+                        <span class="select">
+                            <select required id="states">
+                            </select>
+                        </span>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-globe"></i>
+                        </span>
+                    </p>
+                </div>
+
+                <div class="field">
+                    <label for="moradia">Moradia:</label>
+                    <div class="control">
+                        <label for="casa" class="radio">
+                            <input required type="radio" id="casa" name="moradia" value="casa"> Casa</label>
+
+                        <label for="apartamento" class="radio">
+                            <input required type="radio" id="apartamento" name="moradia" value="apartamento">
+                            Apartamento</label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="curriculo">Resumo Currículo:</label>
+                    <div class="control">
+                        <textarea required name="curriculo" id="curriculo" cols="50" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="cargo">Cargo:</label>
+                    <div class="control">
+                        <input required type="text" id="cargo" name="cargo" maxlength="40">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="desc-cargo">Descrição do Cargo:</label>
+                    <div class="control">
+                        <input required type="text" id="desc-cargo" name="desc-cargo" maxlength="500">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="data-inicio">Data Início:</label>
+                    <div class="control">
+                        <input required type="text" id="data-inicio" name="data-inicio" maxlength="10">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-primary" type="submit" id="submit" value="Submit">Submit</button>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <button id="clear" class="button is-primary">Limpar</button>
+                    </div>
+                </div>
+
+            </form>
+            <h3>Resumo de Tudo:</h3>
+            <div class="field">
+                <div class="control" id="consolidacao">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src=""></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
