@@ -1,4 +1,4 @@
-##### Git & GitHub - O que é e para que serve
+### Git & GitHub - O que é e para que serve
 
 Os principais pontos abordados foram:
 
