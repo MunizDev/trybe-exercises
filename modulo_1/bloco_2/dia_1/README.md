@@ -2,16 +2,16 @@
 
 Os principais pontos abordados foram:
 
-O que é o Git?
+- O que é o Git?
 
-Qual a principal diferença para os outros VCS's?
+- Qual a principal diferença para os outros VCS's?
 
-Como configurar o Git na sua máquina?
+- Como configurar o Git na sua máquina?
 
-Como iniciar um repositório local?
+- Como iniciar um repositório local?
 
-O que é o GitHub?
+- O que é o GitHub?
 
-Como subir seu repositório local para o GitHub?
+- Como subir seu repositório local para o GitHub?
 
 O que é Branch, Merge, Commit?
