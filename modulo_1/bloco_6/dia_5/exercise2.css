@@ -7,3 +7,20 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+body{
+    font-size: 20px;
+    margin: 0% 5%;
+}
+
+header{
+    text-align: center;
+}
+
+header nav ul li{
+    display: none;
+}
+
+
+
+
