@@ -32,4 +32,31 @@ header nav ul li {
   }
 }
 
-
+@media screen and (min-width: 1200px) {
+  .article-and-asides {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: violet;
+  }
+  .main-content {
+    margin: 0% 2%;
+    width: 90%;
+    background-color: royalblue;
+  }
+  .asides-group {
+    background-color: green;
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+  .aside-one {
+    width: 100%;
+    background-color: yellow;
+  }
+  .aside-two {
+    width: 100%;
+    background-color: yellow;
+  }
+  footer {
+    background-color: yellow;
+  }
+}
