@@ -8,19 +8,28 @@ html {
   box-sizing: inherit;
 }
 
-body{
-    font-size: 20px;
-    margin: 0% 5%;
+body {
+  font-size: 20px;
+  margin: 0% 5%;
 }
 
-header{
-    text-align: center;
+header {
+  text-align: center;
 }
 
-header nav ul li{
-    display: none;
+header nav ul li {
+  display: none;
 }
 
+@media screen and (min-width: 800px) {
+  .asides-group {
+    display: flex;
+  }
 
+  .aside-one,
+  .aside-two {
+    width: 50%;
+  }
+}
 
 
