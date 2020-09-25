@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 2 - Exercício 3</title>
+</head>
+<body>
+    <h1>Números de clicks no botão</h1>
+    <p id="total-clicks"></p>
+    <button id="button-top">CLIQUE AQUI</button>
+    <script>
+        const buttonTop = document.getElementById('button-top');
+        const displayClicks = document.getElementById('total-clicks');
+        let clickCount = 0;
+        buttonTop.addEventListener('click', () => {
+            clickCount += 1;
+            displayClicks.innerText = `até agora foram... ${clickCount}`;
+        });
+    </script>
+</body>
+</html>
