@@ -1,0 +1,62 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 20px;
+  margin: 0% 5%;
+}
+
+header {
+  text-align: center;
+}
+
+header nav ul li {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .asides-group {
+    display: flex;
+  }
+
+  .aside-one,
+  .aside-two {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .article-and-asides {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: violet;
+  }
+  .main-content {
+    margin: 0% 2%;
+    width: 90%;
+    background-color: royalblue;
+  }
+  .asides-group {
+    background-color: green;
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+  .aside-one {
+    width: 100%;
+    background-color: yellow;
+  }
+  .aside-two {
+    width: 100%;
+    background-color: yellow;
+  }
+  footer {
+    background-color: yellow;
+  }
+}
