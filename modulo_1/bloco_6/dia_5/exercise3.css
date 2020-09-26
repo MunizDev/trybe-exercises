@@ -81,7 +81,6 @@
   height: 1%;
 }
 
-/* mobile */
 @media screen and (max-width: 360px) {
   body {
     padding: 0;
@@ -120,6 +119,19 @@
   }
 }
 
-/* pc */
-@media screen and (min-width: 360px) {
+@media print {
+  #header,
+  #navigation,
+  #footer {
+    display: none;
+  }
+
+  #content-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #content {
+    width: 100%;
+  }
 }
