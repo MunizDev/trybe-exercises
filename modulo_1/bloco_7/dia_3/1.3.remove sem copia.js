@@ -15,5 +15,9 @@ function myRemoveWithoutCopy(arr, item) {
 // implemente seus testes aqui
 assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 4]); // OK
 assert.notDeepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 3, 4]); // OK
-assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4]), [1, 2, 3, 4]); // OK
+
+const array = [1, 2, 3, 4];
+myRemoveWithoutCopy(array, 3);
+assert.notDeepStrictEqual(array, [1, 2, 3, 4]); // OK
+
 assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 5), [1, 2, 3, 4]); // OK

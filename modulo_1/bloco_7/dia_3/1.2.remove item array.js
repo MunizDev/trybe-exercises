@@ -12,7 +12,7 @@ function myRemove(arr, item) {
 
 // implemente seus testes aqui
 const array = [1, 2, 3, 4];
-assert.deepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 4]); // OK
-assert.notDeepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 3, 4]); // OK
-assert.deepStrictEqual(myRemove([1, 2, 3, 4]), [1, 2, 3, 4]); // OK
-assert.deepStrictEqual(myRemove([1, 2, 3, 4], 5), [1, 2, 3, 4]); // OK
+assert.deepStrictEqual(myRemove(array, 3), [1, 2, 4]); // OK
+assert.notDeepStrictEqual(myRemove(array, 3), [1, 2, 3, 4]); // OK
+assert.deepStrictEqual(array, [1, 2, 3, 4]); // OK NAO SOFREU
+assert.deepStrictEqual(myRemove(array, 5), [1, 2, 3, 4]); // OK
