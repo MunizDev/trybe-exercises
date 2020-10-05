@@ -66,19 +66,14 @@ const books = [
 const expected_result = false;
 
 function authorUnique() {
-  const authorSorted = books.sort(function (a, b) {
-    return a.author.birthYear - b.author.birthYear;
-  });
-  let authorUniqueBirth = true;
-  for (let index = 0; index < authorSorted.length - 1; index += 1) {
-    if (
-      authorSorted[index].author.birthYear ===
-      authorSorted[index + 1].author.birthYear
-    ) {
-      authorUniqueBirth = false;
-    }
-  }
-  return authorUniqueBirth;
+  return books.every(
+    (element) =>
+      !books.find(
+        (elementTwo) =>
+          element.author.birthYear === elementTwo.author.birthYear &&
+          element.id !== elementTwo.id,
+      ),
+  );
 }
 
 assert.equal(authorUnique(), expected_result);
