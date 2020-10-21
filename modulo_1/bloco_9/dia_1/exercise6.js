@@ -26,7 +26,8 @@ const sendMarsTemperature = (callback, error) => {
   }
 };
 
-// imprime "It is currently 47ºF at Mars", por exemplo, ou "Error getting temperature: Robot is busy"
+// imprime "It is currently 47ºF at Mars", por exemplo, ou "Error getting temperature: Robot is busy."
+
 sendMarsTemperature(temperatureInFahrenheit, handleError);
 
 // imprime "Hi there! Curiosity here. Right now is 53ºC at Mars", por exemplo, ou "Error getting temperature: Robot is busy"
