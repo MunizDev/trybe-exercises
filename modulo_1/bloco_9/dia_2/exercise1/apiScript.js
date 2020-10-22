@@ -12,7 +12,6 @@ async function fetchJoke() {
     .then((response) => response.json())
     .then((data) => data);
   jokePhrase.innerText = aJoke.joke;
-  console.log(aJoke);
 }
 
 window.onload = () => fetchJoke();
