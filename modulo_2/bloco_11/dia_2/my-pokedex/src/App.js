@@ -1,21 +1,24 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
 import data from "./data";
+import PropTypes from "prop-types";
 
 class Pokemon extends React.Component {
   render() {
+    const { name, type, image } = this.props.pk;
+    const { value, measurementUnit } = this.props.pk.averageWeight;
+
     return (
       <div className="pokemon">
         <div className="info-pk">
-          <p>{this.props.objPokemon.name}</p>
-          <p>{this.props.objPokemon.type}</p>
+          <p>{name}</p>
+          <p>{type}</p>
           <p>
-            Peso: {this.props.objPokemon.averageWeight.value}
-            {this.props.objPokemon.averageWeight.measurementUnit}
+            Peso: {value}
+            {measurementUnit}
           </p>
         </div>
-        <img src={this.props.objPokemon.image} />
+        <img src={image} alt="pokemon" />
         <br />
         <br />
       </div>
@@ -30,7 +33,7 @@ class Pokedex extends React.Component {
         <h1>Pokedex</h1>
         <div className="pokemons">
           {data.map((pokemon) => (
-            <Pokemon objPokemon={pokemon} />
+            <Pokemon pk={pokemon} key={pokemon.id} />
           ))}
         </div>
       </div>
@@ -41,5 +44,13 @@ class Pokedex extends React.Component {
 function App() {
   return <Pokedex />;
 }
+
+Pokemon.propTypes = {
+  name: PropTypes.string,
+  type: PropTypes.string,
+  value: PropTypes.number,
+  measurementUnit: PropTypes.string,
+  image: PropTypes.string,
+};
 
 export default App;
