@@ -46,11 +46,15 @@ function App() {
 }
 
 Pokemon.propTypes = {
-  name: PropTypes.string,
-  type: PropTypes.string,
-  value: PropTypes.number,
-  measurementUnit: PropTypes.string,
-  image: PropTypes.string,
+  pk: PropTypes.shape({
+    name: PropTypes.string,
+    type: PropTypes.string,
+    averageWeight: PropTypes.shape({
+      measurementUnit: PropTypes.string,
+      value: PropTypes.number
+    }),
+    image: PropTypes.string,
+  }).isRequired,
 };
 
 export default App;
