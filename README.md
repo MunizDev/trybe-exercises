@@ -55,60 +55,60 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 6-1: _HTML & CSS - Forms_
 - [X] 6-2: _Bibliotecas JavaScript e Frameworks CSS_
 - [X] 6-3: _CSS Flexbox - Part 1_
-- [ ] 6-4: _CSS Flexbox - Part 2_
-- [ ] 6-5: _CSS Responsivo - Mobile First_
-- [ ] 6-6: _[Projeto - PÃ¡gina inicial do Facebook]()_
+- [X] 6-4: _CSS Flexbox - Part 2_
+- [X] 6-5: _CSS Responsivo - Mobile First_
+- [X] 6-6: _[Projeto - Página inicial do Facebook](https://munizdev.github.io/projetos/facebook/)_
 
 ##### Bloco 7: JavaScript ES6 & Testes UnitÃ¡rios
 
-- [ ] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
-- [ ] 7-2: _JavaScript ES6 - Objects_
-- [ ] 7-3: _Testes unitÃ¡rios em JavaScript_
-- [ ] 7-4: _[Projeto - JavaScript Testes UnitÃ¡rios]()_
+- [X] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
+- [X] 7-2: _JavaScript ES6 - Objects_
+- [X] 7-3: _Testes unitÃ¡rios em JavaScript_
+- [X] 7-4: _[Projeto - JavaScript Testes Unitários](https://munizdev.github.io/projetos/js-unit-test/)_
 
 ##### Bloco 8: JavaScript ES6
 
-- [ ] 8-1: _JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort_
-- [ ] 8-2: _JavaScript ES6 - Higher Order Functions - map e filter_
-- [ ] 8-3: _JavaScript ES6 - Higher Order Functions - reduce_
-- [ ] 8-4: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
-- [ ] 8-5: _[Projeto - Zoo functions]()_
+- [X] 8-1: _JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort_
+- [X] 8-2: _JavaScript ES6 - Higher Order Functions - map e filter_
+- [X] 8-3: _JavaScript ES6 - Higher Order Functions - reduce_
+- [X] 8-4: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
+- [X] 8-5: _[Projeto - Zoo functions](https://munizdev.github.io/projetos/zoo-functions/)_
 
 ##### Bloco 9: Assincronicidade & Callbacks
 
-- [ ] 9-1: _JavaScript AssÃ­ncrono e Callbacks_
-- [ ] 9-2: _JavaScript Promises_
-- [ ] 9-3: _[Projeto - Carrinho de Compras]()_
+- [X] 9-1: _JavaScript AssÃ­ncrono e Callbacks_
+- [X] 9-2: _JavaScript Promises_
+- [X] 9-3: _[Projeto - Carrinho de Compras](https://munizdev.github.io/projetos/shopping-cart/)_
 
 ##### Bloco 10: Jest
 
-- [ ] 10-1: _Primeiros passos no Jest_
-- [ ] 10-2: _Jest - Testes AssÃ­ncronos_
-- [ ] 10-3: _Jest - Simulando comportamentos_
-- [ ] 10-4: _[Projeto - Jest AssÃ­ncrono e Mocking]()_
+- [X] 10-1: _Primeiros passos no Jest_
+- [X] 10-2: _Jest - Testes AssÃ­ncronos_
+- [X] 10-3: _Jest - Simulando comportamentos_
+- [X] 10-4: _[Projeto - Jest Assíncrono e Mocking](https://munizdev.github.io/projetos/jest-trybe/)_
 
 ##### Bloco 11: IntroduÃ§Ã£o - React
 
-- [ ] 11-1: _'Hello, world!' no React!_
-- [ ] 11-2: _Componentes React_
-- [ ] 11-3: _[Projeto - Movie Cards Library]()_
+- [X] 11-1: _'Hello, world!' no React!_
+- [X] 11-2: _Componentes React_
+- [X] 11-3: _[Projeto - Movie Cards Library](https://munizdev.github.io/projetos/movie-cards-library/)_
 
 ##### Bloco 12: React
 
-- [ ] 12-1: _Components com estado_
-- [ ] 12-2: _Eventos e formulÃ¡rios no React_
-- [ ] 12-3: _[Projeto - Movie Cards Library Stateful]()_
+- [X] 12-1: _Components com estado_
+- [X] 12-2: _Eventos e formulários no React_
+- [X] 12-3: _[Projeto - Movie Cards Library Stateful](https://munizdev.github.io/projetos/movie-card-library-stateful/)_
 
 ##### Bloco 13: React
 
-- [ ] 13-1: _Melhorando o reuso de componentes: props.children e PropTypes_
-- [ ] 13-2: _Ciclo de vida de componentes em React_
-- [ ] 13-3: _React Router_
-- [ ] 13-4: _[Projeto - Movie Cards Library CRUD]()_
+- [X] 13-1: _Melhorando o reuso de componentes: props.children e PropTypes_
+- [X] 13-2: _Ciclo de vida de componentes em React_
+- [X] 13-3: _React Router_
+- [X] 13-4: _[Projeto - Movie Cards Library CRUD](https://munizdev.github.io/projetos/movie-card-library-crud/)_
 
 ##### Bloco 14: Metodologias Ãgeis
 
-- [ ] 14-1: _Metodologias Ãgeis_
+- [X] 14-1: _Metodologias Ãgeis_
 - [ ] 14-2: _[Projeto - Frontend Online Store]()_
 
 ##### Bloco 15: Testes em React
