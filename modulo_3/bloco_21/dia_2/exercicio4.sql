@@ -1,24 +1,22 @@
---3.7 Select the code of each box, along with the name of the city the box is located in.
---3.8 Select the warehouse codes, along with the number of boxes in each warehouse. 
-    -- Optionally, take into account that some warehouses are empty (i.e., the box count should show up as zero, instead of omitting the warehouse from the result).
---3.9 Select the codes of all warehouses that are saturated (a warehouse is saturated if the number of boxes in it is larger than the warehouse's capacity).
---3.10 Select the codes of all the boxes located in Chicago.
+-- 2.10 Select all the data of employees, including each employee's department's data.
+-- 2.11 Select the name and last name of each employee, along with the name and budget of the employee's department.
+-- 2.12 Select the name and last name of employees working for departments with a budget greater than $60,000.
+-- 2.14 Select the names of departments with more than two employees.
 
-SELECT b.code, w.Location 
-FROM Boxes b JOIN Warehouses w
-on b.warehouse = w.code;
+SELECT e.*, d.name FROM Employees e
+JOIN Departments d
+ON e.department = d.code;
 
-SELECT warehouse, count(*) 
-FROM Boxes 
-GROUP BY warehouse;
+SELECT e.name, e.lastname, d.name, d.budget FROM Employees e
+JOIN Departments d
+ON e.department = d.code;
 
-SELECT b.warehouse, count(*), w.capacity 
-FROM Boxes b JOIN Warehouses w
-ON w.code = b.Warehouse 
-GROUP BY warehouse
-HAVING(count(*) > w.capacity);
+SELECT e.name, e.lastname, d.name, d.budget FROM Employees e
+JOIN Departments d
+ON e.department = d.code
+WHERE d.budget > 60000;
 
-SELECT b.code
-FROM Boxes b JOIN Warehouses w
-ON b.warehouse = w.code
-WHERE w.location = 'Chicago';
+SELECT Department, d.name, COUNT(*) Funcionarios FROM Employees
+JOIN Departments d ON department = d.code
+GROUP BY Department
+HAVING(funcionarios > 2);
