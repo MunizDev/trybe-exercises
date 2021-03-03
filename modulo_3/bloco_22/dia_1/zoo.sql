@@ -1,0 +1,26 @@
+DROP DATABASE IF EXISTS `zoo`;
+CREATE DATABASE `zoo`;
+USE zoo;
+
+CREATE TABLE gerente(
+gerente_id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50) NOT NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE cuidador(
+cuidador_id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50) NOT NULL,
+gerente_id INT NOT NULL,
+FOREIGN KEY (gerente_id) REFERENCES gerente(gerente_id)
+) ENGINE=InnoDB;
+
+CREATE TABLE animais(
+animal_id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50) NOT NULL,
+especie VARCHAR(50) NOT NULL,
+sexo VARCHAR(50) NOT NULL,
+idade INT NOT NULL,
+localização VARCHAR(100) NOT NULL,
+cuidador_id INT NOT NULL,
+FOREIGN KEY (cuidador_id) REFERENCES cuidador(cuidador_id)
+) ENGINE=InnoDB;
